@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pertemuan 3 - function</title>
+</head>
+<body>
+  <script>
+    // 1. function
+    // function salam() {
+    //   console.log('hallo selamat sore')
+    // }
+
+    // salam();
+
+    // 2. assign value
+    // const number = '2';
+
+    // const iniFungsi = function contoh() {
+    //   console.log('berhasil');
+    // }
+
+    // console.log(typeof number);
+
+    // iniFungsi();
+
+
+
+    // 3. function tanpa nama --> anonymous function
+    // const iniFungsi = function() {
+    //   console.log('berhasil');
+    // }
+
+    // iniFungsi();
+
+    // 4. hoisting
+    // iniFungsi();
+
+    // function iniFungsi() {
+    //   console.log('ini hoisting');
+    // }
+
+    // 5. method
+    // let orang = {
+    //   nama: 'marsha abdurrahman',
+    //   tinggal: 'mesir',
+    //   berbicara: function() {
+    //     console.log('halo nama saya ' + this.nama);
+    //   }
+    // };
+
+    // orang.berbicara();
+
+    // 6. parameter (nilai yang kita kirim ke fungsi)
+    // function contoh(parameter) {
+    //   console.log(parameter);
+    // }
+
+    // contoh('ini sudah malam', 1);
+
+    // 7. function ke function
+    // function running(param) {
+    //   param();
+    // }
+
+    // running(function () {
+    //   console.log('ini berhasil');
+    // });
+
+    // 8. arrow function
+    // const running = (param) => param();
+    // running(()=> console.log('ini adalah arrow function'));
+
+    // 9. contoh lain tanpa return
+    const iniFungsiNormal = function(param1, param2) {
+      console.log('ini adalah param 1 ', param1);
+      console.log('ini adalah param 2 ', param2);
+      return 5;
+    }
+
+    iniFungsiNormal(31, 35);
+
+    // 10. kita ubah jadi arrow
+    const arrowFunction = (param1, param2) => {
+      console.log('ini adalah param 1 ', param1);
+      console.log('ini adalah param 2 ', param2);
+    }
+    arrowFunction();
+  </script>
+</body>
+</html>
