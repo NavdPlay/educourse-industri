@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // array
+    // menyimpan beberapa nilai dalam satu variabel
+
+    // part 1
+    // let nama = 'atilla';
+    let angka = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    // console.log(angka[0]); // cara akses index
+
+    // part 2
+    let dataCampur = [1, 'nama', true, null, [1, 2], {umur: 20}];
+
+    // console.log(dataCampur[5].umur);
+
+    // part 3
+    // angka.push(9); // nambah array di index terbaru
+    // angka.pop(); // menghilangkan index terakhir
+    // console.log(angka);
+
+    // part 4 function sederhana
+    // let buah = ['mangga', 'manggis', 'apel'];
+    // buah.forEach(function (item, index) {
+    //   console.log('ini index ke-' + index + ' ' + item);
+    // });
+
+    // part 5 object
+    let mobil = {
+      merk: 'toyota',
+      warna: 'hitam',
+      tahun: 2012,
+      pajak: false
+    };
+
+    // console.log(mobil.warna);
+
+    // mobil.pajak = true; // ini cara ubah valuenya
+
+    // console.log(mobil);
+
+    // part 6 object sedikit advance
+    let orang = {
+      nama: 'marsa',
+      umur: 20,
+      perkenalan: function() {
+        console.log(
+          'halo nama saya ' + this.nama + ' umur saya ' + this.umur
+        );
+      },
+    };
+
+    // console.log(orang.perkenalan());
+
+    // part 7 array of object
+    // let mahasiswa = [
+    //   {nama: 'sandi', umur: 20, jurusan: 'informatika'},
+    //   {nama: 'ucup', umur: 20, jurusan: 'sastra nuklir'},
+    // ];
+
+    // console.log(mahasiswa[1].nama);
+
+    // part 8 object of array
+
+    let mahasiswa = {
+      nama: 'sandi',
+      umur: 20,
+      jurusan: 'informatika',
+      nilai: [80, 90, 100, 90]
+    };
+
+    // console.log(mahasiswa.nilai[2]);
+
+    
+  </script>
+</body>
+</html>

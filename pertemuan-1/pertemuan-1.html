@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>BMI Calculator</h2>
+  
+  <input type="number" placeholder="Masukkan BB" id="berat">
+  <input type="number" placeholder="Masukkan TB" id="tinggi">
+  
+  <button onclick="hitungBMI()">Kalkulasi</button>
+  
+  <p id="hasil"></p>
+  <p id="klasifikasi"></p>
+  
+  <script>
+    // if (kondisi) {
+    //     // kode yang dijalankan seperti apa
+    // } else if (kondisi_lagi) {
+    //     // kode yang dijalankan seperti apa
+    // }else {
+    //     // kode yang dijalankan seperti apa
+    // }
+    
+    // switch (hari) {
+    //     case "senin":
+    //         console.log('upacara');
+    //         break;
+    //     case "selasa":
+    //         console.log('tidak upacara');
+    //         break;
+    //     default:
+    //         console.log()
+    // }
+    
+    // for (let i = 1; i <= 3; i++) {
+    //     console.log('pengulangan ke-' + i);
+    // }
+    
+    function hitungBMI() {
+      const berat = document.getElementById('berat').value;
+      const tinggiCm = document.getElementById('tinggi').value;
+      let kelas;
+      
+      const tinggiMeter = tinggiCm / 100;
+      
+      const bmi = berat / (tinggiMeter * tinggiMeter);
+      
+      // console.log(bmi);
+      
+      if (bmi < 18.5) {
+        kelas = 'Underweight';
+      } else if (bmi < 25) {
+        kelas = 'Normal';
+      } else if (bmi < 30) {
+        kelas = 'Overweight';
+      } else if (bmi < 35) {
+        kelas = 'Obese';
+      } else {
+        kelas = 'Extremely Obese';
+      }
+      
+      document.getElementById('hasil').innerText = bmi;
+      document.getElementById('klasifikasi').innerText = kelas;
+    }
+  </script>
+</body>
+</html>
