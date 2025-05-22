@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Followers Instagram</title>
+    <style>
+      body {
+        background-color: #f9f9f9;
+      }
+
+      h1 {
+        text-align: center;
+        color: #003366;
+      }
+
+      .box {
+        background-color: #fff;
+        /* border: 1px solid #003366; */
+        border-radius: 20px;
+        margin: auto;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        max-width: 500px;
+      }
+
+      input {
+        margin: 0;
+        display: block;
+        margin: 10px 0;
+      }
+      
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #003366;
+        border: none;
+        color: #fff;
+        margin-top: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #336699;
+      }
+
+      li {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Cek Follback</h1>
+
+      <label>File Followers</label>
+      <input type="file" id="followersFile">
+
+      <label>File Following</label>
+      <input type="file" id="followingFile">
+
+      <button>Siapa yang ga follback</button>
+      <button>Siapa yang belum saya follback</button>
+
+      <ul id="hasil">
+        <!-- <li>coba 1</li>
+        <li>coba 2</li>
+        <li>coba 3</li>
+        <li>coba 4</li>
+        <li>coba 5</li>
+        <li>coba 6</li>
+        <li>coba 7</li>
+        <li>coba 8</li>
+        <li>coba 9</li>
+        <li>coba 10</li> -->
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    let followers = [];
+    let following = [];
+
+    function bacaFile(file, callback) {
+      const reader = new FileReader();
+      reader.onload = function() {
+        const isi = JSON.parse(event.target.result);
+        callback(isi);
+      };
+      reader.readAsText(file);
+    }
+  </script>
+</html>
